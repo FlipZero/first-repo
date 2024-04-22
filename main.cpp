@@ -2,6 +2,7 @@
 
 int main()
 {
+    //prosty kalkulator
     int a, b, dzialanie;
     std::cout << "KALKULATOR" << std::endl;
     std::cout << "Podaj liczbe calkowita a:";
