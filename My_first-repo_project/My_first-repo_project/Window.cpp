@@ -1,6 +1,3 @@
-#define UNICODE
-#define _UNICODE
-#include <iostream>
 #include "Window.h"
 
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -21,7 +18,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 Window::Window()
     : m_hInstance(GetModuleHandle(nullptr))
 {
-    const wchar_t *CLASS_NAME = L"Hugos Window Class";
+    const wchar_t* CLASS_NAME = L"Hugos Window Class";
 
     WNDCLASS wndClass = {};
     wndClass.lpszClassName = CLASS_NAME;
@@ -41,7 +38,7 @@ Window::Window()
     rect.left = 250;
     rect.top = 250;
     rect.right = rect.left + width;
-    rect.left = rect.top + height;
+    rect.bottom = rect.top + height;
 
     AdjustWindowRect(&rect, style, false);
 
@@ -64,7 +61,7 @@ Window::Window()
 
 Window::~Window()
 {
-    const wchar_t *CLASS_NAME = L"Hugos Window Class";
+    const wchar_t* CLASS_NAME = L"Hugos Window Class";
 
     UnregisterClass(CLASS_NAME, m_hInstance);
 }

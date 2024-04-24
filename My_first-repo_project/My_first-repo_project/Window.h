@@ -8,10 +8,8 @@ class Window
 {
 public:
     Window();
-    void NewFunction(WNDCLASS &wndClass, const wchar_t *CLASS_NAME);
-    void gg(WNDCLASS &wndClass, const wchar_t *CLASS_NAME);
-    Window(const Window &) = delete;
-    Window &operator=(const Window &) = delete;
+    Window(const Window&) = delete;
+    Window& operator=(const Window&) = delete;
     ~Window();
 
     bool ProcessMessages();
