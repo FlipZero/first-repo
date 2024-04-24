@@ -1,3 +1,39 @@
+//adding new class item
+#include <iostream>
+#include <conio.h> 
+#include "Item.h"
+
+int main()
+{
+    while (true) {
+        Item* pItem = new Item;
+        int choise;
+        std::cout << "What do you what\n[1] Show all items [2] Add new item [3] Remove item: ";
+        std::cin >> choise;
+        switch (choise) {
+        case 1:
+            pItem->show_item();
+            _getch();
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        default:
+            system("CLS");
+            return true;
+            break;
+        }
+        system("CLS");
+    }
+    return 0;
+ }
+
+
+//Window working program
+/*
 #include <iostream>
 #include "Window.h"
 
@@ -20,17 +56,18 @@ int main()
     }
 
     delete pWindow;
-
+    
     return 0;
 }
+*/
 
 
+//prosty kalkulator
 /*
 #include <iostream>
 
 int main()
 {
-    //prosty kalkulator
     int a, b, dzialanie;
     std::cout << "KALKULATOR" << std::endl;
     std::cout << "Podaj liczbe calkowita a:";
